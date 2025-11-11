@@ -12,6 +12,15 @@ struct VLCPlayerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onDisappear() {
+                    NSApplication.shared.terminate(nil)
+                }
+        }
+        .commands {
+            CommandGroup(replacing: .newItem) {}
+            CommandGroup(replacing: .pasteboard) {}
+            CommandGroup(replacing: .undoRedo) {}
+            OpenFileCommands()
         }
     }
 }

@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct ContentView: View {
+    @State private var showImporter: Bool = false
+    @State private var url: URL? = nil
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            VideoPlayerView(url: $url)
         }
         .padding()
+        .focusedSceneValue(\.openFileAction, OpenFileAction(showImporter: { showImporter = true }))
+        .fileImporter(isPresented: $showImporter, allowedContentTypes: [.movie], allowsMultipleSelection: false) { result in
+            switch result {
+            case .success(let urls):
+                if let url = urls.first {
+                    self.url = url
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        .dropDestination(for: URL.self) { items, location in
+            if let url = items.first {
+                self.url = url
+            }
+        }
     }
 }
 
