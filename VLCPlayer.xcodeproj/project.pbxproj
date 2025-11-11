@@ -49,9 +49,22 @@
 		CA382B5D2EC1E07200AD9E96 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VLCKit.framework; path = Libs/VLCKit/VLCKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CA9993272EC3293C00FE6171 /* Exceptions for "VLCPlayer" folder in "VLCPlayer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CA382B252EC1DEB000AD9E96 /* VLCPlayer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CA382B282EC1DEB000AD9E96 /* VLCPlayer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CA9993272EC3293C00FE6171 /* Exceptions for "VLCPlayer" folder in "VLCPlayer" target */,
+			);
 			path = VLCPlayer;
 			sourceTree = "<group>";
 		};
@@ -434,6 +447,7 @@
 					"$(PROJECT_DIR)/Libs/VLCKit",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VLCPlayer/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,6 +482,7 @@
 					"$(PROJECT_DIR)/Libs/VLCKit",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VLCPlayer/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,6 +9,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct ContentView: View {
+    @Environment(AppDelegate.self) private var appDelegate
     @State private var showImporter: Bool = false
     @State private var url: URL? = nil
     
@@ -30,6 +31,11 @@ struct ContentView: View {
         }
         .dropDestination(for: URL.self) { items, location in
             if let url = items.first {
+                self.url = url
+            }
+        }
+        .onAppear() {
+            if let url = appDelegate.urls.first {
                 self.url = url
             }
         }
