@@ -5,6 +5,7 @@
 //  Created by uhimania on 2025/11/12.
 //
 
+import AppKit
 import SwiftUI
 
 struct ControllerView: View {
@@ -86,6 +87,14 @@ struct ControllerView: View {
                     .labelsHidden()
                     .onChange(of: model.rate) { _, _ in
                         model.setRate(model.rate)
+                    }
+                    
+                    Button {
+                        if let window = NSApp.keyWindow {
+                            window.toggleFullScreen(nil)
+                        }
+                    } label: {
+                        Image(systemName: "viewfinder")
                     }
                 }
                 .buttonStyle(.plain)
