@@ -10,12 +10,25 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @Environment(AppDelegate.self) private var appDelegate
-    @State private var showImporter: Bool = false
     @ObservedObject private var model = VideoPlayerViewModel()
+    @State private var showImporter: Bool = false
+    @State private var image: String = ""
     
     var body: some View {
-        VStack {
+        ZStack {
             VideoPlayerView(model: model)
+                .onTapGesture {
+                    if model.state == .playing {
+                        model.pause()
+                        image = "pause.circle"
+                    } else if model.state == .paused {
+                        model.play()
+                        image = "play.circle"
+                    }
+                }
+            
+            FadeImageView(image: $image)
+                .foregroundStyle(.white)
         }
         .overlay {
             ControllerView(model: model)
