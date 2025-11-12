@@ -11,19 +11,21 @@ import UniformTypeIdentifiers
 struct ContentView: View {
     @Environment(AppDelegate.self) private var appDelegate
     @State private var showImporter: Bool = false
-    @State private var url: URL? = nil
+    @ObservedObject private var model = VideoPlayerViewModel()
     
     var body: some View {
         VStack {
-            VideoPlayerView(url: $url)
+            VideoPlayerView(model: model)
         }
-        .padding()
+        .overlay {
+            ControllerView(model: model)
+        }
         .focusedSceneValue(\.openFileAction, OpenFileAction(showImporter: { showImporter = true }))
         .fileImporter(isPresented: $showImporter, allowedContentTypes: [.movie], allowsMultipleSelection: false) { result in
             switch result {
             case .success(let urls):
                 if let url = urls.first {
-                    self.url = url
+                    model.play(url: url)
                 }
             case .failure(let error):
                 print(error)
@@ -31,12 +33,12 @@ struct ContentView: View {
         }
         .dropDestination(for: URL.self) { items, location in
             if let url = items.first {
-                self.url = url
+                model.play(url: url)
             }
         }
         .onAppear() {
             if let url = appDelegate.urls.first {
-                self.url = url
+                model.play(url: url)
             }
         }
     }
