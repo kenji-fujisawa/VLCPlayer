@@ -11,23 +11,6 @@
 		CA382B602EC1E07A00AD9E96 /* VLCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA382B5D2EC1E07200AD9E96 /* VLCKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CA382B342EC1DEB100AD9E96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA382B1E2EC1DEB000AD9E96 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CA382B252EC1DEB000AD9E96;
-			remoteInfo = VLCPlayer;
-		};
-		CA382B3E2EC1DEB100AD9E96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CA382B1E2EC1DEB000AD9E96 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CA382B252EC1DEB000AD9E96;
-			remoteInfo = VLCPlayer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		CA382B612EC1E07A00AD9E96 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -44,8 +27,6 @@
 
 /* Begin PBXFileReference section */
 		CA382B262EC1DEB000AD9E96 /* VLCPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLCPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA382B332EC1DEB100AD9E96 /* VLCPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VLCPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA382B3D2EC1DEB100AD9E96 /* VLCPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VLCPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA382B5D2EC1E07200AD9E96 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VLCKit.framework; path = Libs/VLCKit/VLCKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,16 +49,6 @@
 			path = VLCPlayer;
 			sourceTree = "<group>";
 		};
-		CA382B362EC1DEB100AD9E96 /* VLCPlayerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VLCPlayerTests;
-			sourceTree = "<group>";
-		};
-		CA382B402EC1DEB100AD9E96 /* VLCPlayerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VLCPlayerUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,20 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA382B302EC1DEB100AD9E96 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA382B3A2EC1DEB100AD9E96 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,8 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				CA382B282EC1DEB000AD9E96 /* VLCPlayer */,
-				CA382B362EC1DEB100AD9E96 /* VLCPlayerTests */,
-				CA382B402EC1DEB100AD9E96 /* VLCPlayerUITests */,
 				CA382B5C2EC1E07200AD9E96 /* Frameworks */,
 				CA382B272EC1DEB000AD9E96 /* Products */,
 			);
@@ -121,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				CA382B262EC1DEB000AD9E96 /* VLCPlayer.app */,
-				CA382B332EC1DEB100AD9E96 /* VLCPlayerTests.xctest */,
-				CA382B3D2EC1DEB100AD9E96 /* VLCPlayerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,52 +114,6 @@
 			productReference = CA382B262EC1DEB000AD9E96 /* VLCPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CA382B322EC1DEB100AD9E96 /* VLCPlayerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA382B4A2EC1DEB100AD9E96 /* Build configuration list for PBXNativeTarget "VLCPlayerTests" */;
-			buildPhases = (
-				CA382B2F2EC1DEB100AD9E96 /* Sources */,
-				CA382B302EC1DEB100AD9E96 /* Frameworks */,
-				CA382B312EC1DEB100AD9E96 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA382B352EC1DEB100AD9E96 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CA382B362EC1DEB100AD9E96 /* VLCPlayerTests */,
-			);
-			name = VLCPlayerTests;
-			packageProductDependencies = (
-			);
-			productName = VLCPlayerTests;
-			productReference = CA382B332EC1DEB100AD9E96 /* VLCPlayerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CA382B3C2EC1DEB100AD9E96 /* VLCPlayerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA382B4D2EC1DEB100AD9E96 /* Build configuration list for PBXNativeTarget "VLCPlayerUITests" */;
-			buildPhases = (
-				CA382B392EC1DEB100AD9E96 /* Sources */,
-				CA382B3A2EC1DEB100AD9E96 /* Frameworks */,
-				CA382B3B2EC1DEB100AD9E96 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA382B3F2EC1DEB100AD9E96 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CA382B402EC1DEB100AD9E96 /* VLCPlayerUITests */,
-			);
-			name = VLCPlayerUITests;
-			packageProductDependencies = (
-			);
-			productName = VLCPlayerUITests;
-			productReference = CA382B3D2EC1DEB100AD9E96 /* VLCPlayerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,14 +126,6 @@
 				TargetAttributes = {
 					CA382B252EC1DEB000AD9E96 = {
 						CreatedOnToolsVersion = 26.1;
-					};
-					CA382B322EC1DEB100AD9E96 = {
-						CreatedOnToolsVersion = 26.1;
-						TestTargetID = CA382B252EC1DEB000AD9E96;
-					};
-					CA382B3C2EC1DEB100AD9E96 = {
-						CreatedOnToolsVersion = 26.1;
-						TestTargetID = CA382B252EC1DEB000AD9E96;
 					};
 				};
 			};
@@ -245,28 +144,12 @@
 			projectRoot = "";
 			targets = (
 				CA382B252EC1DEB000AD9E96 /* VLCPlayer */,
-				CA382B322EC1DEB100AD9E96 /* VLCPlayerTests */,
-				CA382B3C2EC1DEB100AD9E96 /* VLCPlayerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CA382B242EC1DEB000AD9E96 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA382B312EC1DEB100AD9E96 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA382B3B2EC1DEB100AD9E96 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,34 +166,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA382B2F2EC1DEB100AD9E96 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA382B392EC1DEB100AD9E96 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CA382B352EC1DEB100AD9E96 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CA382B252EC1DEB000AD9E96 /* VLCPlayer */;
-			targetProxy = CA382B342EC1DEB100AD9E96 /* PBXContainerItemProxy */;
-		};
-		CA382B3F2EC1DEB100AD9E96 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CA382B252EC1DEB000AD9E96 /* VLCPlayer */;
-			targetProxy = CA382B3E2EC1DEB100AD9E96 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CA382B452EC1DEB100AD9E96 /* Debug */ = {
@@ -448,6 +304,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VLCPlayer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,6 +340,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VLCPlayer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,82 +356,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		CA382B4B2EC1DEB100AD9E96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.uhimania.VLCPlayerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VLCPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VLCPlayer";
-			};
-			name = Debug;
-		};
-		CA382B4C2EC1DEB100AD9E96 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.uhimania.VLCPlayerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VLCPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VLCPlayer";
-			};
-			name = Release;
-		};
-		CA382B4E2EC1DEB100AD9E96 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.uhimania.VLCPlayerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = VLCPlayer;
-			};
-			name = Debug;
-		};
-		CA382B4F2EC1DEB100AD9E96 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.uhimania.VLCPlayerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = VLCPlayer;
 			};
 			name = Release;
 		};
@@ -594,24 +376,6 @@
 			buildConfigurations = (
 				CA382B482EC1DEB100AD9E96 /* Debug */,
 				CA382B492EC1DEB100AD9E96 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA382B4A2EC1DEB100AD9E96 /* Build configuration list for PBXNativeTarget "VLCPlayerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA382B4B2EC1DEB100AD9E96 /* Debug */,
-				CA382B4C2EC1DEB100AD9E96 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA382B4D2EC1DEB100AD9E96 /* Build configuration list for PBXNativeTarget "VLCPlayerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA382B4E2EC1DEB100AD9E96 /* Debug */,
-				CA382B4F2EC1DEB100AD9E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
