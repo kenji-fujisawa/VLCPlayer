@@ -26,6 +26,11 @@ struct ContentView: View {
                         image = "play.circle"
                     }
                 }
+                .onTapGesture(count: 2) {
+                    if let window = NSApp.keyWindow {
+                        window.toggleFullScreen(nil)
+                    }
+                }
             
             FadeImageView(image: $image)
                 .foregroundStyle(.white)
