@@ -1,4 +1,4 @@
-# AppIconMaker
+# VLCPlayer
 
 VLCKit を利用した動画再生アプリです
 
