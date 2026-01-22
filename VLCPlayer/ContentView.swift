@@ -10,13 +10,20 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @Environment(AppDelegate.self) private var appDelegate
-    @ObservedObject private var model = VideoPlayerViewModel()
+    @StateObject private var model = VideoPlayerViewModel()
     @State private var showImporter: Bool = false
     @State private var image: String = ""
     
     var body: some View {
         ZStack {
             VideoPlayerView(model: model)
+                .onChange(of: model.state, { _, _ in
+                    if model.state == .playing {
+                        SleepPreventer.shared.disableSleep()
+                    } else {
+                        SleepPreventer.shared.enableSleep()
+                    }
+                })
                 .onTapGesture {
                     if model.state == .playing {
                         model.pause()
@@ -30,6 +37,18 @@ struct ContentView: View {
                     if let window = NSApp.keyWindow {
                         window.toggleFullScreen(nil)
                     }
+                }
+                .onKeyPress { press in
+                    Task {
+                        await MainActor.run {
+                            if press.key == .rightArrow {
+                                model.jumpForward(seconds: 15)
+                            } else if press.key == .leftArrow {
+                                model.jumpBackward(seconds: 15)
+                            }
+                        }
+                    }
+                    return .handled
                 }
             
             FadeImageView(image: $image)
