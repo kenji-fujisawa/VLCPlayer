@@ -52,6 +52,9 @@ class VideoPlayerViewModel: ObservableObject {
     }
     
     func play() {
+        if currentTime == totalTime {
+            jump(to: 0)
+        }
         player.play()
     }
     
