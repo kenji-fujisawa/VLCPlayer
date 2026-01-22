@@ -38,6 +38,18 @@ struct ContentView: View {
                         window.toggleFullScreen(nil)
                     }
                 }
+                .onKeyPress { press in
+                    Task {
+                        await MainActor.run {
+                            if press.key == .rightArrow {
+                                model.jumpForward(seconds: 15)
+                            } else if press.key == .leftArrow {
+                                model.jumpBackward(seconds: 15)
+                            }
+                        }
+                    }
+                    return .handled
+                }
             
             FadeImageView(image: $image)
                 .foregroundStyle(.white)
