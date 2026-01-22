@@ -37,6 +37,8 @@ struct FadeImageView: View {
             opacity = 0
             width = 100
             height = 100
+        } completion: {
+            image = ""
         }
     }
 }
