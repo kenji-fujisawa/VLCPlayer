@@ -10,7 +10,7 @@ import UniformTypeIdentifiers
 
 struct ContentView: View {
     @Environment(AppDelegate.self) private var appDelegate
-    @ObservedObject private var model = VideoPlayerViewModel()
+    @StateObject private var model = VideoPlayerViewModel()
     @State private var showImporter: Bool = false
     @State private var image: String = ""
     
