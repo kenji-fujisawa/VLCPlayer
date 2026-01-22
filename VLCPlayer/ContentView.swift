@@ -17,6 +17,13 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VideoPlayerView(model: model)
+                .onChange(of: model.state, { _, _ in
+                    if model.state == .playing {
+                        SleepPreventer.shared.disableSleep()
+                    } else {
+                        SleepPreventer.shared.enableSleep()
+                    }
+                })
                 .onTapGesture {
                     if model.state == .playing {
                         model.pause()
